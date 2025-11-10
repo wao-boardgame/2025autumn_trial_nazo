@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>迷宮しりとり お試し謎</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <section id="quiz1" class="quiz-section">
+            <img src="./assets/quiz1.png" alt="迷宮しりとり" class="main-image">
+            <h2>第1問</h2>
+            <input type="text" id="quiz1-input" placeholder="答えを入力..." />
+            <button id="quiz1-btn">答える</button>
+            <p id="quiz1-msg"></p>
+        </section>
+
+        <section id="quiz2" class="quiz-section hidden">
+            <img src="./assets/quiz2.png" alt="迷宮しりとり2" class="main-image">
+            <h2>第2問</h2>
+            <input type="text" id="quiz2-input" placeholder="答えを入力..." />
+            <button id="quiz2-btn">答える</button>
+            <p id="quiz2-msg"></p>
+        </section>
+
+        <section id="share-area" class="hidden share-section">
+            <button id="share-btn">結果をシェアする</button>
+            <div id="fallback-share" class="hidden">
+                <p>シェアするSNSを選択：</p>
+                <a id="twitter" href="#" target="_blank">Twitter</a>
+                <a id="line" href="#" target="_blank">LINE</a>
+                <a id="facebook" href="#" target="_blank">Facebook</a>
+                <a id="instagram" href="#" target="_blank">Instagram</a>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
