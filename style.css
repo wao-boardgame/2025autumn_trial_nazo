@@ -19,13 +19,25 @@ body {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-.quiz-section {
-    background: #fff;
-    border: 2px solid #f8b500;
-    border-radius: 12px;
-    padding: 20px;
-    margin-top: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+@media (max-width: 480px) {
+
+    /* 入力欄とボタンを縦並びにする */
+    .quiz-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .quiz-section input[type="text"],
+    .quiz-section button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    /* ボタン左の余白を消す */
+    .quiz-section button {
+        margin-left: 0 !important;
+    }
 }
 
 .quiz-section h2 {
@@ -94,4 +106,5 @@ button:hover {
         width: 100%;
         margin-left: 0;
     }
+
 }
