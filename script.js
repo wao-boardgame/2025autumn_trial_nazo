@@ -29,6 +29,7 @@ const quiz2 = {
 const shareArea = document.getElementById("share-area");
 const shareBtn = document.getElementById("share-btn");
 const fallback = document.getElementById("fallback-share");
+const shareURL = "https://wao-boardgame.github.io/2025autumn_trial_nazo/"
 
 // ====== 判定関数 ======
 function checkAnswer(userInput, correctList) {
@@ -107,5 +108,6 @@ document.getElementById("line_share").onclick = (e) => {
 
     window.open(url, "_blank");
 };
+
 
 
