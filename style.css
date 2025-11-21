@@ -108,3 +108,17 @@ button:hover {
     }
 
 }
+.share-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 12px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#x_share {
+    background-color: #00acee;
+}
