@@ -122,3 +122,11 @@ button:hover {
 #x_share {
     background-color: #00acee;
 }
+
+#line_share {
+    background-color: #00c300;
+}
+
+.share-btn svg {
+    display: block;
+}
