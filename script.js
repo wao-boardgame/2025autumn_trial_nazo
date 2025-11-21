@@ -77,7 +77,7 @@ quiz2.input.addEventListener("keydown", e => {
 shareBtn.onclick = async() => {
     const shareData = {
         title: "迷宮しりとり お試し謎",
-        text: "#WAOのチラシ謎 を解き明かした！\n\n#ゲームマーケット2025秋\n11/22(土)・23(日) 両日出展\nボードゲーム・謎解き制作団体 WAO\n\n【J23】にてお待ちしております！\n\n解答入力サイト↓",
+        text: "#WAOのチラシ謎 を解き明かした！\n\n#ゲームマーケット2025秋\n11/22(土)・23(日) 両日出展\nボードゲーム・謎解き制作団体 WAO\n\n【J23】にてお待ちしております！\n\nチラシ謎はこちら↓",
         url: location.href
     };
     if (navigator.share) {
@@ -93,4 +93,5 @@ function setFallbackLinks({ text, url }) {
     document.getElementById("line").href = `https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(url)}`;
     document.getElementById("facebook").href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
     document.getElementById("instagram").href = `https://www.instagram.com/`;
+
 }
