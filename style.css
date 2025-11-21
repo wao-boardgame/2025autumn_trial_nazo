@@ -20,20 +20,17 @@ body {
 }
 
 @media (max-width: 480px) {
-
     /* 入力欄とボタンを縦並びにする */
     .quiz-section {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-
     .quiz-section input[type="text"],
     .quiz-section button {
         width: 100%;
         margin: 5px 0;
     }
-
     /* ボタン左の余白を消す */
     .quiz-section button {
         margin-left: 0 !important;
@@ -80,6 +77,40 @@ button:hover {
     display: none;
 }
 
+#shareBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#fallback {
+    display: flex;
+    gap: 10px;
+}
+
+.share-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 12px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#x_share {
+    background-color: #00acee;
+}
+
+#line_share {
+    background-color: #00c300;
+}
+
+.share-btn svg {
+    display: block;
+}
+
 #quiz1-msg,
 #quiz2-msg {
     margin-top: 10px;
@@ -106,27 +137,4 @@ button:hover {
         width: 100%;
         margin-left: 0;
     }
-
-}
-.share-btn {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    padding: 8px 12px;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-#x_share {
-    background-color: #00acee;
-}
-
-#line_share {
-    background-color: #00c300;
-}
-
-.share-btn svg {
-    display: block;
 }
