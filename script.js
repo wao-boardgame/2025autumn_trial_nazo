@@ -74,8 +74,7 @@ quiz2.input.addEventListener("keydown", e => {
 });
 
 // ===== シェア =====
-x_share.onclick = async() => {
-    const text = `#WAOのチラシ謎 を解き明かした！
+const shareText = `#WAOのチラシ謎 を解き明かした！
 
 #ゲームマーケット2025秋
 11/22(土)・23(日) 両日出展
@@ -83,31 +82,30 @@ x_share.onclick = async() => {
 
 【J23】にてお待ちしております！
 
-解答入力サイト↓
-${shareURL}`;
+チラシ謎はこちら↓`;
 
-    const intentUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`;
+// ▼ X共有
+document.getElementById("x_share").onclick = (e) => {
+    e.preventDefault();
 
-    // ▼ 画像ロード
-    const resp = await fetch(imagePath, { cache: "no-cache" });
-    const blob = await resp.blob();
-    const file = new File([blob], "poster.png", { type: blob.type });
+    // テキスト＋URL を X intent に渡す
+    const url =
+        "https://twitter.com/intent/tweet?text=" +
+        encodeURIComponent(shareText + "\n" + shareURL);
 
-    // ▼ スマホ（ファイル共有対応）ならネイティブ共有
-    if (navigator.share && navigator.canShare && navigator.canShare({ files: [file] })) {
-        try {
-            await navigator.share({
-                title: "迷宮しりとり お試し謎",
-                text: text,
-                files: [file]
-            });
-            return;
-        } catch (err) {
-            console.log("共有キャンセル", err);
-        }
-    }
-
-    // ▼ PC or 非対応ブラウザ → intent URL へ
-    window.open(intentUrl, "_blank");
+    window.open(url, "_blank");
 };
+
+// ▼ LINE共有
+document.getElementById("line_share").onclick = (e) => {
+    e.preventDefault();
+
+    // テキスト＋URL を LINE intent に渡す
+    const url =
+        "https://line.me/R/share?text=" +
+        encodeURIComponent(shareText + "\n" + shareURL);
+
+    window.open(url, "_blank");
+};
+
 
